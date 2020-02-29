@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="123" height="123" viewBox="0 0 123 123">
+  <g id="Resultados-optimos" transform="translate(-895 -4626)">
+    <g id="Resultados-Optimos-2" data-name="Resultados-Optimos" transform="translate(659.129 2879.722)">
+      <g id="Elipse_17" data-name="Elipse 17" transform="translate(235.871 1746.278)" fill="none" stroke="#ff70cf" stroke-width="2">
+        <circle cx="61.5" cy="61.5" r="61.5" stroke="none"/>
+        <circle cx="61.5" cy="61.5" r="60.5" fill="none"/>
+      </g>
+    </g>
+    <g id="Icon_feather-check-square" data-name="Icon feather-check-square" transform="translate(931.5 4663.5)">
+      <path id="Trazado_106" data-name="Trazado 106" d="M13.5,21.208l6.518,6.518L41.743,6" transform="translate(4.035 0.673)" fill="none" stroke="#ff70cf" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Trazado_107" data-name="Trazado 107" d="M43.606,24.053V39.261a4.345,4.345,0,0,1-4.345,4.345H8.845A4.345,4.345,0,0,1,4.5,39.261V8.845A4.345,4.345,0,0,1,8.845,4.5h23.9" fill="none" stroke="#ff70cf" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

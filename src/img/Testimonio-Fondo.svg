@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="370.348" height="399.131" viewBox="0 0 370.348 399.131">
+  <defs>
+    <filter id="Testimonio-Fondo" x="0" y="0" width="370.348" height="399.131" filterUnits="userSpaceOnUse">
+      <feOffset dy="7" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Testimonio-Fondo)">
+    <path id="Testimonio-Fondo-2" data-name="Testimonio-Fondo" d="M14.5,0S140.8,41.81,188.122,29.994,264.647,0,304.6,0s28.1,7.087,28.1,15.829V347.3c0,8.742-6.493,15.829-14.5,15.829H14.5C6.493,363.131,0,356.044,0,347.3V15.829C0,7.087,6.493,0,14.5,0Z" transform="translate(18 11)" fill="#fff"/>
+  </g>
+</svg>

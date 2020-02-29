@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="123" height="123" viewBox="0 0 123 123">
+  <g id="Pacientes-Satisfechos" transform="translate(-1316 -4626)">
+    <g id="Pacientes-Satisfechos-2" data-name="Pacientes-Satisfechos" transform="translate(1080.129 2879.722)">
+      <g id="Elipse_17" data-name="Elipse 17" transform="translate(235.871 1746.278)" fill="none" stroke="#b370ff" stroke-width="2">
+        <circle cx="61.5" cy="61.5" r="61.5" stroke="none"/>
+        <circle cx="61.5" cy="61.5" r="60.5" fill="none"/>
+      </g>
+    </g>
+    <path id="Icon_awesome-hands-helping" data-name="Icon awesome-hands-helping" d="M45.934,18.072H31.627v5.271a6.777,6.777,0,1,1-13.554,0V11.9l-6.109,3.671a6.011,6.011,0,0,0-2.927,5.158v4.452l-7.53,4.349a3,3,0,0,0-1.1,4.113l7.53,13.046a3.013,3.013,0,0,0,4.113,1.1l9.733-5.619H34.639a6.03,6.03,0,0,0,6.024-6.024h1.506a3.009,3.009,0,0,0,3.012-3.012V27.108h.753a2.254,2.254,0,0,0,2.259-2.259V20.331A2.254,2.254,0,0,0,45.934,18.072Zm13.9-3.52L52.306,1.505A3.013,3.013,0,0,0,48.193.4L38.46,6.024h-9.62a6.069,6.069,0,0,0-3.191.913L22.5,8.9a2.992,2.992,0,0,0-1.412,2.551V23.343a3.765,3.765,0,0,0,7.53,0V15.06H45.934a5.274,5.274,0,0,1,5.271,5.271v2.683l7.53-4.349a3.015,3.015,0,0,0,1.1-4.113Z" transform="translate(1347.881 4662.404)" fill="#b370ff"/>
+  </g>
+</svg>

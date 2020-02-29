@@ -1,12 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
+import Tratamientos from './components/Tratamientos/Tratamientos';
+import QuienesSomos from './components/QuienesSomos/QuienesSomos';
+import Testimonios from './components/Testimonios/Testimonios';
+import Elegirnos from './components/Elegirnos/Elegirnos';
+import Footer from './components/Footer/Footer';
+import Boton_Messenger from './img/Boton-Messenger.svg'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Icono_Whatsapp from './img/Icono-Whatsapp.svg';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import css from './css/main.css';
+
+
+
+class Index extends React.Component{
+    
+    render(){
+        return(
+            <>
+            <Navbar/>
+            <Tratamientos/>
+            <Hero/>
+            </>
+        );
+    }
+}
+
+ReactDOM.render(<Index/>,document.getElementById('root'));
