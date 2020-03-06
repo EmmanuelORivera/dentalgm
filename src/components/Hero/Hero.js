@@ -6,12 +6,14 @@ class Hero extends React.Component{
         return(
             <section className="hero">
                 <img className="hero__background" src={Background} alt="Imagen de fondo"/>
-                <p>
-                "Atención y calidad que <span>van de boca en boca"</span>
-                <div className="centrar">
-                <a className="boton-azul" href="#">Agenda tu cita</a>
+                <div className="hero__info">
+                    <p>
+                    "Atención y calidad que <span>van de boca en boca"</span>
+                    </p>
+                    <div className="boton">
+                    <a  className="boton__contenido" href="#">Agenda tu cita</a>
+                    </div>
                 </div>
-                </p>
             </section>
         );
     }

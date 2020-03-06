@@ -21,8 +21,11 @@ class Index extends React.Component{
         return(
             <>
             <Navbar/>
-            <Tratamientos/>
             <Hero/>
+            <Tratamientos/>
+            <QuienesSomos/>
+            <Testimonios/>
+            <p>holaholaholaholaholahola</p>
             </>
         );
     }

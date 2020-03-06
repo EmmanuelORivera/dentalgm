@@ -27,7 +27,7 @@ class Tratamientos extends React.Component{
         console.log(data.length);
         console.log(property.id*(100/properties.length));
         return(
-        <section className="tratamientos">
+            <>
             <button 
             onClick={()=>this.nextProperty()}
             disabled={property.id === (data.length-1)}
@@ -40,22 +40,24 @@ class Tratamientos extends React.Component{
             >
                 Anterior
             </button>
+        <section className="tratamientos">
+            
             <h2>Nuestros Tratamientos</h2>
             <p>Conoce todo sobre los tratamientos que DentalGM ofrece para ti</p>
             <section className="tratamientos__tarjetas">
-           <div className="slider">
-           <div className="slider__wrapper" style={{
-               'transform': `translateX(-${property.id*(100/properties.length)}%)`
-           }}>
-           {properties.map((property1)=><Tarjeta key={property1.id} property={property1} activa={property}/>)}
-            
-           </div>
-           </div>
-           
+                <div className="slider">
+                <div className="slider__back-button"></div>
+                <div className="slider__wrapper" style={{
+                    'transform': `translateX(-${property.id*(100/properties.length)}%)`
+                }}>
+                {properties.map((property1)=><Tarjeta key={property1.id} property={property1} activa={property}/>)}
+                </div>
+                <div className="slider__next-button"></div>
+                </div>
             </section>
 
         </section>
-
+            </>
             );
     }
 }
