@@ -36,7 +36,7 @@ class Contactanos extends React.Component {
               información de contacto, comentarios/preguntas y nosotros
               estaremos en contacto contigo.
             </p>
-            <form method="POST" data-netlify="true">
+            <form name="contacto" method="POST" data-netlify="true">
               <p>
                 <label>Nombre</label>
                 <input type="text" name="nombre" />
