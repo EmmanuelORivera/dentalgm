@@ -53,54 +53,21 @@ class Contactanos extends React.Component {
               información de contacto, comentarios/preguntas y nosotros
               estaremos en contacto contigo.
             </p>
-            <form onSubmit={this.handleSubmit} data-netlify="true" method="POST">
-              <p>
-                <label>Nombre</label>
-                <input
-                  type="text"
-                  name="nombre"
-                  value={nombre}
-                  onChange={this.handleChange}
-                />
-              </p>
-              <p>
-                <label>Correo electrónico</label>
-                <input
-                  type="email"
-                  name="correo"
-                  value={correo}
-                  onChange={this.handleChange}
-                />
-              </p>
-              <p>
-                <label>Número telefónico</label>
-                <input
-                  type="text"
-                  name="telefono"
-                  value={telefono}
-                  onChange={this.handleChange}
-                />
-              </p>
-              <p>
-                <label>
-                  ¿Cómo supiste sobre Dental GM?
-                  <select
-                    name="opcion"
-                    value={opcion}
-                    onChange={this.handleChange}
-                  >
-                    <option value="Buscando en Google">
-                      Buscando en Google
-                    </option>
-                    <option value="Amigos/Familiares">Amigos/Familiares</option>
-                    <option value="Anuncios">Anuncios</option>
-                    <option value="Redes sociales">Redes sociales</option>
-                    <option value="Otro">Otro</option>
-                  </select>
-                  <button type="submit">Enviar</button>
-                </label>
-              </p>
-            </form>
+            <form name="contact" method="post">
+          <input type="hidden" name="form-name" value="contact" />
+          <p>
+            <label>Your Name: <input type="text" name="name"/></label>
+          </p>
+          <p>
+            <label>Your Email: <input type="email" name="email"/></label>
+          </p>
+          <p>
+            <label>Message: <textarea name="message"></textarea></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
             <h3 style={withBorder}>2. Contacto Vía WhatsApp o Llamada</h3>
             <p>
               Si te encuentras en el célular puedes abrir tu aplicación o
