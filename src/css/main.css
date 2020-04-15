@@ -360,11 +360,19 @@ h2 {
   width: 80%;
   margin: 0 auto;
   background: white;
+  padding-bottom: 2em;
 }
 
 .informacion__margen {
   width: 80%;
   margin: 0 auto;
+}
+
+.informacion__margen .buttons {
+  -ms-grid-columns: (minmax(140px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-row-gap: 1em;
+  margin-top: 1em;
 }
 
 .informacion__margen p {
@@ -375,15 +383,13 @@ h2 {
   text-align: left;
   padding-top: 1em;
   margin: 0;
-  border-bottom: none;
 }
 
 .informacion__margen h3 {
   margin: 1em 0;
   color: #6e6e6e;
   font-weight: bold;
-  border-bottom: 1px solid #e5e5e5;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
 
 .tratamientos {
@@ -852,6 +858,11 @@ column-gap: 1%;
 }
 
 @media only screen and (min-width: 500px) {
+  .informacion__margen .buttons {
+    -ms-grid-columns: (minmax(140px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-row-gap: 1em;
+  }
   .footer__superior {
     -ms-grid-columns: 38% auto;
         grid-template-columns: 38% auto;

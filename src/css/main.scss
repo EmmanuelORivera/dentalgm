@@ -291,11 +291,15 @@ $altura: 250px;
   width: 80%;
   margin: 0 auto;
   background: $secundary-background-page;
-
+  padding-bottom: 2em;
   &__margen {
     width: 80%;
     margin: 0 auto;
-
+    .buttons {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      grid-row-gap: 1em;
+      margin-top: 1em;
+    }
     p {
       margin: 1.5em 0 0;
     }
@@ -303,14 +307,12 @@ $altura: 250px;
       text-align: left;
       padding-top: 1em;
       margin: 0;
-      border-bottom: none;
     }
     h3 {
       margin: 1em 0;
       color: #6e6e6e;
       font-weight: bold;
-      border-bottom: 1px solid #e5e5e5;
-      padding-bottom: .5em;
+      padding-bottom: 0.5em;
     }
   }
 }
@@ -414,7 +416,6 @@ column-gap: 1%;
       &__contenido {
         font-size: 0.8em;
         padding: 0.6em 2em;
-        
       }
     }
   }
@@ -629,6 +630,15 @@ column-gap: 1%;
 @media only screen and (min-width: 500px) {
   body {
   }
+  .informacion {
+    &__margen {
+      .buttons {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        grid-row-gap: 1em;
+      }
+    }
+  }
+
   .footer {
     &__superior {
       grid-template-columns: 38% auto;

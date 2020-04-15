@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Ortodoncia from "./components/Tratamientos/Tratamiento/Ortodoncia";
 import Endodoncia from "./components/Tratamientos/Tratamiento/Endodoncia";
 import Contactanos from "./components/Contactanos/Contactanos";
+import Footer from "./components/Footer/Footer";
 import Icono_Whatsapp from "./img/Icono-Whatsapp.svg";
 import Icono_Telefono from "./img/Icono-Telefono.svg";
 import css from "./css/main.css";
@@ -33,8 +34,12 @@ export default class App extends React.Component {
           <Route path="/Tratamientos" exact component={tratamientos} />
           <Route path="/Tratamientos/Ortodoncia" render={Ortodoncia} />
           <Route path="/Tratamientos/Endodoncia" render={Endodoncia} />
-          <Route path="/Contactanos" render={Contactanos} />
+          <Route path="/Contactanos" component={Contactanos} />
         </Switch>
+        <Footer
+          Icono_Whatsapp={Icono_Whatsapp}
+          Icono_Telefono={Icono_Telefono}
+        />
       </BrowserRouter>
     );
   }
