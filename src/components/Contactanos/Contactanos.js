@@ -52,7 +52,7 @@ class Contactanos extends React.Component {
               <p>
                 <label>
                   ¿Cómo supiste sobre Dental GM?
-                  <select value={this.state.value} onChange={this.handleChange}>
+                  <select value={this.state.value} onChange={this.handleChange} name="opciones">
                     <option value="Buscando en Google">
                       Buscando en Google
                     </option>
