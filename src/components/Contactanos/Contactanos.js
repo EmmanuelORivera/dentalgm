@@ -4,18 +4,36 @@ import Boton from "../Boton";
 import Icono_Whatsapp from "../../img/Icono-Whatsapp.svg";
 import Icono_Telefono from "../../img/Icono-Telefono.svg";
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 class Contactanos extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: "" };
+    this.state = { nombre: "", correo: "", telefono: "", opcion: "" };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange(e) {
-    this.setState({ value: e.target.value });
+    this.setState({ [e.target.name]: e.target.value });
+  }
+  handleSubmit(e) {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+
+    e.preventDefault();
   }
   render() {
     const withoutBorder = { border: "none" };
     const withBorder = { borderBottom: "1px solid #e5e5e5" };
+    const { nombre, correo, telefono, opcion } = this.state;
     return (
       <>
         <section className="tratamiento-hero">
@@ -36,23 +54,42 @@ class Contactanos extends React.Component {
               información de contacto, comentarios/preguntas y nosotros
               estaremos en contacto contigo.
             </p>
-            <form name="contacto" method="POST" data-netlify="true">
+            <form onSubmit={this.handleSubmit}>
               <p>
                 <label>Nombre</label>
-                <input type="text" name="nombre" />
+                <input
+                  type="text"
+                  name="nombre"
+                  value={nombre}
+                  onChange={this.handleChange}
+                />
               </p>
               <p>
                 <label>Correo electrónico</label>
-                <input type="text" name="nombre" />
+                <input
+                  type="email"
+                  name="correo"
+                  value={correo}
+                  onChange={this.handleChange}
+                />
               </p>
               <p>
                 <label>Número telefónico</label>
-                <input type="text" name="telefono" />
+                <input
+                  type="text"
+                  name="telefono"
+                  value={telefono}
+                  onChange={this.handleChange}
+                />
               </p>
               <p>
                 <label>
                   ¿Cómo supiste sobre Dental GM?
-                  <select value={this.state.value} onChange={this.handleChange} name="opciones">
+                  <select
+                    name="opcion"
+                    value={opcion}
+                    onChange={this.handleChange}
+                  >
                     <option value="Buscando en Google">
                       Buscando en Google
                     </option>
