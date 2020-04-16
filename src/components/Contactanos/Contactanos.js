@@ -19,10 +19,11 @@ class Contactanos extends React.Component {
   }
   handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
   handleSubmit = (e) => {
+    const form = e.target;
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state }),
+      body: encode({ "form-name": form.getAttribute("name"), ...this.state }),
     })
       .then(() => alert("Success!"))
       .catch((error) => alert(error));
@@ -53,7 +54,21 @@ class Contactanos extends React.Component {
               información de contacto, comentarios/preguntas y nosotros
               estaremos en contacto contigo.
             </p>
-            <form onSubmit={this.handleSubmit}>
+            <form
+              onSubmit={this.handleSubmit}
+              name="contact"
+              method="post"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
+              {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+              <input type="hidden" name="form-name" value="contact" />
+              <p hidden>
+                <label>
+                  Don’t fill this out:{" "}
+                  <input name="bot-field" onChange={this.handleChange} />
+                </label>
+              </p>
               <p>
                 <label>Nombre</label>
                 <input
