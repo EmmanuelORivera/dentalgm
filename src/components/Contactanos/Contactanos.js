@@ -27,7 +27,6 @@ class Contactanos extends React.Component {
     })
       .then(() => alert("Success!"))
       .catch((error) => alert(error));
-
   };
   render() {
     const withoutBorder = { border: "none" };
@@ -53,66 +52,25 @@ class Contactanos extends React.Component {
               información de contacto, comentarios/preguntas y nosotros
               estaremos en contacto contigo.
             </p>
-            <form
-              onSubmit={this.handleSubmit}
-              name="contact"
-              method="post"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-            >
-              {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+            <form name="contact" method="post">
               <input type="hidden" name="form-name" value="contact" />
-              <p hidden>
+              <p>
                 <label>
-                  Don’t fill this out:{" "}
-                  <input name="bot-field" onChange={this.handleChange} />
+                  Your Name: <input type="text" name="nombre" />
                 </label>
               </p>
               <p>
-                <label>Nombre</label>
-                <input
-                  type="text"
-                  name="nombre"
-                  value={nombre}
-                  onChange={this.handleChange}
-                />
-              </p>
-              <p>
-                <label>Correo electrónico</label>
-                <input
-                  type="email"
-                  name="correo"
-                  value={correo}
-                  onChange={this.handleChange}
-                />
-              </p>
-              <p>
-                <label>Número telefónico</label>
-                <input
-                  type="text"
-                  name="telefono"
-                  value={telefono}
-                  onChange={this.handleChange}
-                />
+                <label>
+                  Your Email: <input type="email" name="correo" />
+                </label>
               </p>
               <p>
                 <label>
-                  ¿Cómo supiste sobre Dental GM?
-                  <select
-                    name="opcion"
-                    value={opcion}
-                    onChange={this.handleChange}
-                  >
-                    <option value="Buscando en Google">
-                      Buscando en Google
-                    </option>
-                    <option value="Amigos/Familiares">Amigos/Familiares</option>
-                    <option value="Anuncios">Anuncios</option>
-                    <option value="Redes sociales">Redes sociales</option>
-                    <option value="Otro">Otro</option>
-                  </select>
-                  <button type="submit">Enviar</button>
+                  Message: <textarea name="mensaje"></textarea>
                 </label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
               </p>
             </form>
             <h3 style={withBorder}>2. Contacto Vía WhatsApp o Llamada</h3>
