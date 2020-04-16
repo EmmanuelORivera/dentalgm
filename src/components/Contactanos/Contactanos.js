@@ -20,13 +20,16 @@ class Contactanos extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   }
   handleSubmit(e) {
-    fetch("/", {
+
+    fetch("./Contactanos", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state }),
     })
       .then(() => alert("Success!"))
       .catch((error) => alert(error));
+    e.preventDefault();
+
   }
   render() {
     const withoutBorder = { border: "none" };
