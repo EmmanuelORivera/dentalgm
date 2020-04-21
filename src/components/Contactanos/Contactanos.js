@@ -13,7 +13,7 @@ const encode = (data) => {
 class Contactanos extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { nombre: "", correo: "", telefono: "", opcion: "" };
+    this.state = { nombre: "", correo: "", telefono: "", opcion: "google" };
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
@@ -46,29 +46,38 @@ class Contactanos extends React.Component {
               <input type="hidden" name="form-name" value="contact" />
               <p>
                 <label>
-                  Your Name: <input type="text" name="nombre" />
+                  Nombre <input type="text" name="nombre" />
                 </label>
               </p>
               <p>
                 <label>
-                  Your Email: <input type="email" name="correo" />
+                  Correo electrónico <input type="email" name="correo" />
                 </label>
               </p>
               <p>
                 <label>
-                  Message: <textarea name="mensaje"></textarea>
+                  Número telefónico <input type="email" name="correo" />
                 </label>
               </p>
               <p>
                 <label>
                   ¿Cómo supiste sobre Dental GM?
-                  <select name="opcion" value={opcion} onChange={this.handleChange}>
+                  <select
+                    name="opcion"
+                    value={opcion}
+                    onChange={this.handleChange}
+                  >
                     <option value="google">Buscando en Google</option>
                     <option value="recomendacion">Amigos/Familiares</option>
                     <option value="anuncios">Anuncios</option>
                     <option value="redessociales">Redes Sociales</option>
                     <option value="otro">Otro</option>
                   </select>
+                </label>
+              </p>
+              <p>
+                <label>
+                  Comentarios/Preguntas: <textarea name="mensaje"></textarea>
                 </label>
               </p>
               <p>
