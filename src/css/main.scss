@@ -75,6 +75,12 @@ h2 {
   padding-bottom: 1rem;
   color: $secound-letter-color;
 }
+.tratamiento-hero{
+  img{
+    object-fit: cover;
+    object-position: 0% 57%;
+  }
+}
 .slider {
   display: block;
   &__wrapper {
@@ -743,10 +749,11 @@ column-gap: 1%;
     }*/
   }
 }
-@media only screen and (min-width: 990px) {
+@media only screen and (min-width: 998px) {
   body {
     font-size: 19px;
   }
+  
   .header {
     display: grid;
     grid-template-columns: 66% auto;

@@ -72,6 +72,13 @@ h2 {
   color: #343434;
 }
 
+.tratamiento-hero img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0% 57%;
+     object-position: 0% 57%;
+}
+
 .slider {
   display: block;
   position: relative;
@@ -968,7 +975,7 @@ column-gap: 1%;
   }
 }
 
-@media only screen and (min-width: 990px) {
+@media only screen and (min-width: 998px) {
   body {
     font-size: 19px;
   }

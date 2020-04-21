@@ -15,19 +15,9 @@ class Contactanos extends React.Component {
     super(props);
     this.state = { nombre: "", correo: "", telefono: "", opcion: "" };
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
-  handleSubmit = (e) => {
-    const form = e.target;
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": form.getAttribute("name"), ...this.state }),
-    })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
-  };
+
   render() {
     const withoutBorder = { border: "none" };
     const withBorder = { borderBottom: "1px solid #e5e5e5" };
@@ -67,6 +57,18 @@ class Contactanos extends React.Component {
               <p>
                 <label>
                   Message: <textarea name="mensaje"></textarea>
+                </label>
+              </p>
+              <p>
+                <label>
+                  ¿Cómo supiste sobre Dental GM?
+                  <select name="opcion" value={opcion} onChange={this.handleChange}>
+                    <option value="google">Buscando en Google</option>
+                    <option value="recomendacion">Amigos/Familiares</option>
+                    <option value="anuncios">Anuncios</option>
+                    <option value="redessociales">Redes Sociales</option>
+                    <option value="otro">Otro</option>
+                  </select>
                 </label>
               </p>
               <p>
