@@ -56,7 +56,7 @@ class Contactanos extends React.Component {
               </p>
               <p>
                 <label>
-                  Número telefónico <input type="email" name="correo" />
+                  Número telefónico <input type="text" name="numero" />
                 </label>
               </p>
               <p>
