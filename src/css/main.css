@@ -84,7 +84,7 @@ form {
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   padding: 2em;
-  border-radius: .5em;
+  border-radius: 0.5em;
   margin: 2em 0;
 }
 
@@ -102,12 +102,24 @@ form textarea {
   display: block;
   border: 1px solid #707070;
   border-radius: 0.5em;
-  padding: 1em 1.5em;
+  padding: .6em 1.5em;
   margin-top: 1.5em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
   font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+}
+
+form select {
+  background-image: url("../img/TrianguloNegro.svg");
+  background-repeat: no-repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .5em auto, 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  overflow: hidden;
 }
 
 form textarea {
