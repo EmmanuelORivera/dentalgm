@@ -4,16 +4,15 @@ import Boton from "../Boton";
 import Icono_Whatsapp from "../../img/Icono-Whatsapp.svg";
 import Icono_Telefono from "../../img/Icono-Telefono.svg";
 
-const encode = (data) => {
-  console.log(data);
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
 class Contactanos extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { nombre: "", correo: "", telefono: "", opcion: "google" };
+    this.state = {
+      nombre: "",
+      correo: "",
+      telefono: "",
+      opcion: "Buscando en Google",
+    };
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
@@ -67,21 +66,23 @@ class Contactanos extends React.Component {
                     value={opcion}
                     onChange={this.handleChange}
                   >
-                    <option value="google">Buscando en Google</option>
-                    <option value="recomendacion">Amigos/Familiares</option>
-                    <option value="anuncios">Anuncios</option>
-                    <option value="redessociales">Redes Sociales</option>
-                    <option value="otro">Otro</option>
+                    <option value="Buscando en Google">
+                      Buscando en Google
+                    </option>
+                    <option value="Amigos/Familiares">Amigos/Familiares</option>
+                    <option value="Anuncios">Anuncios</option>
+                    <option value="Redes Sociales">Redes Sociales</option>
+                    <option value="Otro">Otro</option>
                   </select>
                 </label>
               </p>
               <p>
                 <label>
-                  Comentarios/Preguntas: <textarea name="mensaje"></textarea>
+                  Comentarios / Preguntas: <textarea name="mensaje"></textarea>
                 </label>
               </p>
               <p>
-                <button type="submit">Send</button>
+                <button type="submit">Enviar</button>
               </p>
             </form>
             <h3 style={withBorder}>2. Contacto Vía WhatsApp o Llamada</h3>

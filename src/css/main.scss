@@ -75,10 +75,58 @@ h2 {
   padding-bottom: 1rem;
   color: $secound-letter-color;
 }
-.tratamiento-hero{
-  img{
+.tratamiento-hero {
+  img {
     object-fit: cover;
     object-position: 0% 57%;
+  }
+}
+form {
+  p:nth-child(2) {
+    margin: 0;
+  }
+  background: #fbfbfb;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);;
+  padding: 2em;
+  border-radius: .5em;
+  margin: 2em 0;
+  label {
+    font-weight: bold;
+  }
+  input,
+  select,
+  textarea {
+    display: block;
+    border: 1px solid #707070;
+    border-radius: 0.5em;
+    padding: 1em 1.5em;
+    margin-top: 1.5em;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1em;
+  }
+  textarea{
+    resize: none;
+    height: 9em;
+
+  }
+
+  p:last-child {
+    text-align: center;
+    button {
+      border: none;
+      background: rgb(0, 47, 255);
+      color: $first-letter-color;
+      font-weight: bold;
+      font-size: 1.1em;
+      padding: 0.6em 2.8em;
+      border-radius: 0.4em;
+      cursor: pointer;
+      transition: all $transition-time ease-in-out;
+      &:hover{
+        background: #4364f7;
+      }
+    }
   }
 }
 .slider {
@@ -753,7 +801,7 @@ column-gap: 1%;
   body {
     font-size: 19px;
   }
-  
+
   .header {
     display: grid;
     grid-template-columns: 66% auto;

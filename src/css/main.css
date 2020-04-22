@@ -79,6 +79,63 @@ h2 {
      object-position: 0% 57%;
 }
 
+form {
+  background: #fbfbfb;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  border-radius: .5em;
+  margin: 2em 0;
+}
+
+form p:nth-child(2) {
+  margin: 0;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+  display: block;
+  border: 1px solid #707070;
+  border-radius: 0.5em;
+  padding: 1em 1.5em;
+  margin-top: 1.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  font-size: 1em;
+}
+
+form textarea {
+  resize: none;
+  height: 9em;
+}
+
+form p:last-child {
+  text-align: center;
+}
+
+form p:last-child button {
+  border: none;
+  background: #002fff;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 0.6em 2.8em;
+  border-radius: 0.4em;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+form p:last-child button:hover {
+  background: #4364f7;
+}
+
 .slider {
   display: block;
   position: relative;
