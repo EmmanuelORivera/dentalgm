@@ -80,6 +80,7 @@ h2 {
 }
 
 form {
+  font-size: .6em;
   background: #fbfbfb;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
