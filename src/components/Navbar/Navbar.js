@@ -65,7 +65,7 @@ function showMenu(menu){
     return (
       <>
         <Overlay onClick={this.handlecloseMenu} className={className} />
-        <header className="header">
+        <header className="header" id="scrollToTop">
           <div className="header__complete">
             <span>DENTAL GM</span>
             <img onClick={this.handleClick} src={Menu} alt="Icono del menú" />
@@ -83,7 +83,7 @@ function showMenu(menu){
                     <ul>
                       {tratamientos.map((tratamiento) => (
                         <li key={`${tratamiento.id}`}>
-                          <Link  to={`/Tratamientos/${tratamiento.tratamiento}`}>
+                          <Link to={`/Tratamientos/${tratamiento.tratamiento}`}>
                             {tratamiento.tratamiento}
                           </Link>
                         </li>
@@ -97,7 +97,9 @@ function showMenu(menu){
                   ¿Quiénes somos? <img src={Triangulo} alt="Triangulo" />
                 </div>
               </li>
-              <li><Link to="/Contactanos">Contactanos</Link></li>
+              <li>
+                <Link to="/Contactanos">Contactanos</Link>
+              </li>
             </ul>
           </div>
           <div className="header__right">

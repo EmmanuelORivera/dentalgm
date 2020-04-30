@@ -3,15 +3,28 @@ import Boton from "../Boton";
 import Lugar from "../../img/Lugar.svg";
 import Tiempo from "../../img/Tiempo.svg";
 export default class Footer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      styleDisplay: { display: "grid" },
+    };
+  }
+  shouldComponentUpdate() {
+      console.log("SI");
+  }
+  
   render() {
-    const mensaje = "Hola que tal Dental GM, me gustaría tener más información sobre sus tratamientos."
-    const linkWhatsApp = "https://wa.me/526391017186?text="+mensaje;
+    const mensaje =
+      "Hola que tal Dental GM, me gustaría tener más información sobre sus tratamientos.";
+    const linkWhatsApp = "https://wa.me/526391017186?text=" + mensaje;
+    const pathName = window.location.pathname;
+    
     return (
       <footer className="footer">
         <div className="footer__superior">
           <div className="izquierda">
             <h2>Contactanos</h2>
-            <div className="buttons">
+            <div className="buttons" style={this.state.styleDisplay}>
               <Boton
                 className="test"
                 hrefProp={linkWhatsApp}
