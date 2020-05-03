@@ -78,7 +78,7 @@ function showMenu(menu){
               </li>
               <li>
                 <div className="withTriangle">
-                  Tratamientos <img src={Triangulo} alt="Triangulo" />
+                  <Link to="/Tratamientos">Tratamientos</Link>  <img src={Triangulo} alt="Triangulo" />
                   <div className="dropdown">
                     <ul>
                       {tratamientos.map((tratamiento) => (

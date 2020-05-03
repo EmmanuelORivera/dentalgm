@@ -1,4 +1,5 @@
 import React from "react";
+import Elegirnos from "../Elegirnos/Elegirnos"
 import Slider from "../Slider";
 import Tarjeta from "./Tarjeta";
 import Data_Tratamientos from "../../data/tratamientos";
@@ -54,7 +55,11 @@ export default class Tratamientos extends React.Component {
               )}
             />
           </section>
+
         </section>
+        <Elegirnos />
+        
+
       </>
     );
   }

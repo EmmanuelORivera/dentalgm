@@ -1,30 +1,54 @@
-import React from '../../../node_modules/react';
-import Razon from './Razon';
-import Profesional from '../../img/Profesionales.svg'
-import Resultados_Optimos from '../../img/Resultados-Optimos.svg'
-import Pacientes_Satisfechos from '../../img/Pacientes-Satisfechos.svg'
-import Atencion_Personalizada from '../../img/Atencion-Personalizada.svg'
-import Confianza from '../../img/Confianza.svg'
-import Disponibilidad from '../../img/Disponibilidad.svg'
-export default class Elegirnos extends React.Component{
-    render(){
-        return(
-            <div className="contenedor-blanco">
-            <section className="secciones">
-            <h2>¿Por qué elegir DentalGM?</h2>
-            <section className="section-razon">
-            <Razon src={Profesional}/>
-            <Razon src={Resultados_Optimos}/>
-            <Razon src={Pacientes_Satisfechos}/>
-            <Razon src={Atencion_Personalizada}/>
-            <Razon src={Confianza}/>
-            <Razon src={Disponibilidad}/>
-            </section>
+import React from "../../../node_modules/react";
+import Razon from "./Razon";
+import Data_Razones from "../../data/razones";
+import Slider from "../Slider";
+import Tarjeta from "./Tarjeta";
+export default class Elegirnos extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      properties: Data_Razones,
+      property: Data_Razones[2],
+    };
+    this.nextProperty = this.nextProperty.bind(this);
+    this.prevProperty = this.prevProperty.bind(this);
+  }
 
-            </section>
+  nextProperty = () => {
+    const { properties, property } = this.state;
+    this.setState(() => ({
+      property: properties[property.id + 1],
+    }));
+  };
+  prevProperty = () => {
+    const { properties, property } = this.state;
+    this.setState(() => ({
+      property: properties[property.id - 1],
+    }));
+  };
+  render() {
+    let { properties, property } = this.state;
+    console.log("ID" + property.id + " Long" + properties.length);
+    const loadPageStartingPoint = property.id * (100 / properties.length);
+    const style = { transform: `translateX(-${loadPageStartingPoint}%)` };
+    return (
+      <section className="contenedor">
+        <section className="testimonios" id="razones">
+          <h2>¿Por qué elegir DentalGM?</h2>
 
-            </div>
-
-        );
-    }
+          <section className="testimonios__tarjetas asd">
+            <Slider
+              data={this.state}
+              prevProperty={() => this.prevProperty()}
+              nextProperty={() => this.nextProperty()}
+              style={style}
+              tarjeta={(key, property, activa) => (
+                <Tarjeta key={key} property={property} activa={activa} />
+              )}
+            />
+          </section>
+        </section>
+      </section>
+    );
+  }
 }
